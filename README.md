@@ -100,3 +100,19 @@ DB Update: dotnet ef migrations database update --project ./ --startup-project .
 
 insert into Users (email, Password,name,Role,CreatedAt,IsActive) values ('ccadmin@graydart.com','Qwerty123!','Admin','Admin',datetime('now'),1)
 insert into Users (email, Password,name,Role,CreatedAt,IsActive) values ('ccstaff@graydart.com','Qwerty123!','Staff','Staff',datetime('now'),1)
+
+----------------------------------------------------
+----------- BUILD, RUN, DEPLOY ---------------------
+----------------------------------------------------
+## Docker Build and Run
+BUILD: CC_API> docker build -t currencyconverter:v1 -f Dockerfile .
+RUN: CC_API> docker run -f --rm -p 20000:80 currencyconverter .
+
+## Run using dotnet runtime
+RESTORE PACKAGE: CC_API> dotnet restore
+BUILD: CC_API> dotnet build
+RUN: CC_API> dotnet run
+
+## Kubernetes (Kubectl with minikube)
+> kubectl apply -f deployment.yml
+> kubectl get deploy (kubectl get nodes > to check number of nodes configured on deployment yml)
