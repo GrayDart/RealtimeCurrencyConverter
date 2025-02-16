@@ -33,7 +33,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Usage
 
-1. Call Login API to Get the Authentiation Token (Default login credential, admin@graydart.com | Qwerty123!)
+1. Call Login API to Get the Authentiation Token (Default login credential, ccadmin@graydart.com | Qwerty123!)
 2. the currency you want to convert from
 2. Enter the amount you want to convert
 3. Select the currency you want to convert to
@@ -95,6 +95,7 @@ RES:
 
 ## SQLite Configuration
 DB Migration: dotnet ef migrations add InitialCreate --project ./ --startup-project ../CC_API
+
 DB Update: dotnet ef migrations database update --project ./ --startup-project ../CC_API
 
 insert into Users (email, Password,name,Role,CreatedAt,IsActive) values ('ccadmin@graydart.com','Qwerty123!','Admin','Admin',datetime('now'),1)
