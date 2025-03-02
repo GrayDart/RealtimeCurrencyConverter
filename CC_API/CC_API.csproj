@@ -37,4 +37,7 @@
     <ProjectReference Include="..\CC_Model\CC_Model.csproj" />
     <ProjectReference Include="..\CC_Services\CC_Services.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="..\.dockerignore" Link="WinDocker\.dockerignore" />
+  </ItemGroup>
 </Project>
